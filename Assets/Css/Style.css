@@ -1,0 +1,333 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  --color-header: rgb(26, 0, 34);
+  --color-body: rgb(8, 8, 8);
+  --color-text: rgb(255, 255, 255);
+  --principal: rgb(195, 0, 255);
+}
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .875rem;
+  }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}  
+*{margin: 0; padding: 0; font-family: 'Poppins', sans-serif; box-sizing: border-box;}
+body{background: var(--color-body); color: var(--color-text);}
+.contenedor{padding: 10px 10%;} .Banner{position: relative; width: 100%;
+height: 100vh; background: var(--color-header);} .logo h1{font-size: 25px;}
+.logo h1 span{color: var(--principal);}
+nav{display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;}
+nav ul li{display: inline-block; list-style: none; margin: 10px 20px;}
+nav ul li a{color: var(--color-text); text-decoration: none; font-size: 18px; position: relative;}
+nav ul li a::after{content: ''; width: 0; height: 3px;
+background: var(--principal); position: absolute; left: 0; bottom: -6px; transition: 0.5s;}
+nav ul li a:hover::after{width: 100%;}
+.Presentación{
+  width: 45%;
+  margin-top: 20%;
+  font-size: 30px;}
+.Presentación h1{
+  font-size: 45px;
+  margin-top: 20px;}
+.Presentación h1 span{
+  color: #C400FF;
+}
+.Presentación-John{
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;}
+.Presentación-John img{
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+.Presentación-John:hover
+.Forma{bottom: 40px;}
+.Presentación-John:hover
+.John{left: 45%;}
+
+#Sobre-Mi{padding: 80px 0; color: #ababab;}
+.row{display: flex; justify-content: space-between; flex-wrap: wrap;}
+.SobreMi-col-1{flex-basis: 35%;}
+.SobreMi-col-1 img{width: 100%; border-radius: 15px;}
+.SobreMi-col-2{flex-basis: 60%;}
+.Sub-Titulo{font-size: 60px; font-weight: 600; color: var(--color-text);}
+.Tabla-Titulo{display: flex; margin: 20px 0 40px;}
+.Tabla-Links{margin-right: 50px; font-size: 18px; font-weight: 500; cursor: pointer; position: relative;}
+.Tabla-Links::after{content: ''; width: 0; height: 3px; background: var(--principal); position: absolute; left: 0; bottom: -8px; transition: 0.5s;}
+.Tabla-Links.Link-Activo::after{width: 50%;}
+.Tabla-Contenido ul li{list-style: none; margin: 10px 0;}
+.Tabla-Contenido ul li span{color: var(--principal); font-size: 14px;}
+.Tabla-Contenido{display: none;}
+.Tabla-Contenido.Tabla-Activa{display: block;}
+
+.buttonDownload {
+  margin-top: 20px;
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+  border-radius: 25px;
+  
+	background-color: var(--principal);
+	color: white;
+  
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 25px;
+	text-align: center;
+	text-indent: 15px;
+}
+
+.buttonDownload:hover {
+	background-color: #333;
+	color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+  
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: var(--principal);
+}
+
+.buttonDownload:hover:after {
+	border-top-color: var(--principal);
+	animation-play-state: running;
+}
+
+.social {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.social-icon {
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+.social-icon:hover {
+  color: var(--color-text);
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+}
+
+/* ===== SKILLS =====*/
+.body {
+  height: 50vh;
+  background-color: #212428;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.parent-skill {
+  width: 200px;
+  height: auto;
+}
+
+.skill {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  /* background-color: conic-gradient(#f9004d 10%, #212428 0); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress {
+  width: 97%;
+  height: 97%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  background: linear-gradient(280deg, #1e2024, #23272b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-number {
+  font-family: 'Poppins', sans-serif;
+  color: var(--principal);
+  font-size: 2rem;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-text);
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ===== WORK =====*/
+.container {
+  margin-top: 25px;
+  padding: 20px 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  &__image {
+    max-width: 640px;
+    margin: 20px 30px 0 0;
+    object-fit: contain;
+    align-self: flex-start;
+  }
+  &__text {
+    flex: 1 1 auto;
+  }
+}
+.container p{
+  margin-top: 25px;
+}
+
+.container ul{
+  display: flex;
+  padding: 25px 25px;
+  margin-top: 25px;
+  border-radius: 25px;
+  max-width: 200px;
+  background: #3d3d3d;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container a img {
+  max-width: 640px;
+}
+
+.work_img img {
+  transition: 1s;
+}
+.work_img img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Pie de Pagina */
+.pie-pagina{width: 100%; background-color: #111111;} .pie-pagina .grupo-1{width: 100%; max-width: 1200px; margin: auto; display:grid; grid-template-columns: repeat(3, 1fr); grid-gap:50px; padding: 45px 0px;} .pie-pagina .grupo-1 .box figure{display: flex; justify-content: center; align-items: center;} .pie-pagina .grupo-1 .box figure img{width: 250px;} .pie-pagina .grupo-1 .box h2{color: #fff; margin-bottom: 25px; font-size: 20px;} .pie-pagina .grupo-1 .box p{color: #efefef; margin-bottom: 10px;} .pie-pagina .grupo-1 .red-social a{ display: inline-block; text-decoration: none; width: 45px; height: 45px; line-height: 45px; color: var(--color-text); margin-right: 10px; background-color: var(--principal); text-align: center; transition: all 300ms ease;} .pie-pagina .grupo-1 .red-social a:hover{ color: var(--principal); background-color: var(--color-text); } .pie-pagina .grupo-2{background-color: #222222; padding: 15px 10px; text-align: center; color: var(--color-text);} .pie-pagina .grupo-2 small{font-size: 15px;} .pie-pagina .grupo-2 small a {text-decoration: none; color: var(--principal);}
