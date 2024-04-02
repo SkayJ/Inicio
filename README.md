@@ -12,7 +12,6 @@
 <h3 align="left">Sigueme en:</h3>
 <p align="left">
 <a href="https://gist.github.com/SkayJ" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="skayj" height="30" width="40" /></a>
-
 <a href="https://linkedin.com/in/in/skayj/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="in/skayj/" height="30" width="40" /></a>
 <a href="https://fb.com/ing.johnferreira" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="ing.johnferreira" height="30" width="40" /></a>
 <a href="https://instagram.com/skay.j19" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="skay.j19" height="30" width="40" /></a>
