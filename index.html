@@ -1,146 +1,283 @@
 <!DOCTYPE html>
-<html lang="Es-mx">
+<html lang="Es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/Css/Style.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="Assets/img/Icon.png">
-    <title>Portafolio | Skay J</title>
+
+    <!-- Estilo de la Pagina y Responsivo -->
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/adaptable.css">
+
+    <!-- Efectos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Iconos -->
+    <link rel="icon" href="assets/Image/Icon.png">
+    <link href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css" rel="stylesheet">
+   
+    <!-- Titulo -->
+    <title>Portafolio | Skay J </title>
 </head>
 <body oncontextmenu="return false" onkeydown="return false">
-    <!-- Header -->
-    <div class="Banner">
-        <div class="contenedor">
-            <!-- Menu -->
-            <nav class="Menú">
-                <div class="logo">
-                    <h1>SKAY <span>J</span></h1>
-                </div>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#Trabajo">Trabajos</a></li>
-                    <li><a href="#Contacto">Contactame</a></li>
-                </ul>
-            </nav>
-            <!-- Presentación -->
-            <div class="Presentación">
-                <p>UI/UX Desinger</p>
-                <h1>Hola, soy <span>John</span> Ferreira de Venezuela</h1>
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/john-ferreira-066a422b4/" class="social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/SkayJ" class="social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-                <a download="Curriculum Ing. John Ferreira.pdf" href="Assets/PDF/Currículum Ing. John Ferreira.pdf" class="buttonDownload">Descargar CV</a>
-
+    <!-- Barra de navegación -->
+    <nav id="header">
+        <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+            <a href="#hero">
+                <h1>SKAY <span>J</span></h1>
+            </a>
             </div>
-            <div class="Presentación-John">
-                <img src="Assets/img/Forma.png" class="Forma">
-                <img src="Assets/img/SkayJ.png" class="John">
+            <div class="nav-list">
+            <div class="hamburger">
+                <div class="bar"></div>
+            </div>
+            <ul>
+                <li><a href="#inicio" data-after="Inicio">Inicio</a></li>
+                <li><a href="#habilidades" data-after="Habilidades">Habilidades</a></li>
+                <li><a href="#servicios" data-after="Servicios">Servicios</a></li>
+                <li><a href="#portafolio" data-after="Portafolio">Portafolio</a></li>
+                <li><a href="#contacto" data-after="Contactame">Contactame</a></li>
+            </ul>
             </div>
         </div>
-    </div>
-
-    <!--===== Trabajo =====-->
-    <div class="container" id="Trabajo">
-        <a href="http://www.uba-createc.info/" class="work_img">
-            <img src="assets/img/work1.jpg" alt="">
-        </a>
-        <div class="container__text">
-          <h2>Trabajo</h2>
-          <p>Recientemente, desarrollé la página web <b>Red Createc UBA</b> para<br>
-          un convenio de la Universidad Bicentenaria de Aragua. Utilizando<br>
-          HTML, CSS y JS, optimizando su funcionalidad con plugins como Elementor.</p>
-          <ul>
-            <i class="fa-brands fa-html5 fa-xl" style="color: #ff751a;"></i>
-            <i class="fa-brands fa-css3-alt fa-xl" style="color: #74C0FC;"></i>
-            <i class="fa-brands fa-js fa-xl" style="color: #FFD43B;"></i>
-            <i class="fa-brands fa-elementor fa-xl" style="color: #ff0088;"></i>
-          </ul>
         </div>
-      </div>
+    </nav>
+    <!-- End Header -->
 
-    <!--===== Habilidades =====-->
-    <div class="body">
-        <h2 class="title">Habilidades</h2>
-        <div class="skills">
-            <div class="parent-skill">
-                <div class="skill">
-                    <div class="progress" data-progress="95">
-                        <span class="progress-number">0%</span>
+    <!-- Presentación -->
+    <section id="inicio">
+        <div class="presentacion">
+            <p>UI/UX Desinger</p>
+            <h1>Hola, soy <span>John</span> Ferreira De Venezuela</h1>
+            <div class="social">
+                <a href=""></a>
+                <a href=""></a>
+                <a href="https://github.com/SkayJ"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/skayj"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a download="Curriculum Ing. John Ferreira.pdf" href="Assets/PDF/Currículum Ing. John Ferreira.pdf" class="descargar-cv">Descargar CV</a>
+        </div>
+        <div id="contenedor-imagenes">
+            <img id="Forma" src="assets/Image/Forma.png">
+            <img id="John" src="assets/Image/John.png">
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <div class="titulo" data-aos="fade-up"data-aos-duration="3000">
+            <h2>Mis <span>Habilidades</span></h2>
+        </div>
+        <div class="habilidades">
+            <ul class="habilidades-elemento">
+                <li class="habilidades-caja" data-aos="fade-up"data-aos-duration="3000">
+                    <i class="fa-brands fa-html5"><h3>95%</h3></i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-1"></div>
                     </div>
-                </div>
-                <span class="title">HTML</span>
+                </li>
+            
+                <li class="habilidades-caja" data-aos="fade-up"data-aos-duration="3000">
+                    <i class="fa-brands fa-css3-alt"><h3>90%</h3></i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-2"></div>
+                    </div>
+                </li>
+
+                <li class="habilidades-caja" data-aos="fade-up"data-aos-duration="3000">
+                    <i class="fa-brands fa-sass"><h3>90%</h3></i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-2"></div>
+                    </div>
+                </li>
+            
+                <li class="habilidades-caja" data-aos="fade-up"data-aos-duration="3000">
+                    <i class="fa-brands fa-js"><h3>85%</h3></i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-3"></div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="habilidades-elemento" data-aos="fade-up"data-aos-duration="3000">
+                <li class="habilidades-caja">
+                    <i><img src="assets/Image/icons8-jquery.svg" alt="icon">80%</i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-4"></div>
+                    </div>
+                </li>
+            
+                <li class="habilidades-caja" data-aos="fade-up"data-aos-duration="3000">
+                    <i class="fa-brands fa-bootstrap"><h3>75%</h3></i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-5"></div>
+                    </div>
+                </li>
+                
+                <li class="habilidades-caja" data-aos="fade-up"data-aos-duration="3000">
+                    <i class="fa-brands fa-php"><h3>70%</h3></i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-6"></div>
+                    </div>
+                </li>
+
+                <li class="habilidades-caja" data-aos="fade-up"data-aos-duration="3000">
+                    <i class="fa-brands fa-python"><h3>70%</h3></i>
+                    <div class="progreso">
+                        <div class="progreso-val progreso-val-6"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="titulo" data-aos="fade-up" data-aos-duration="3000">
+            <h2>Mis <span>Servicios</span></h2>
+        </div>
+        <div class="caja-contenedor">
+            <div class="servicios-elemento" data-aos="fade-up"data-aos-duration="3000">
+                <i class="fa-thin fa-display-code"></i>
+                <h3>Diseño Web</h3>
+                <p>Combino creatividad y habilidades técnicas para crear experiencias web impactantes y funcionales.</p>
             </div>
 
-            <div class="parent-skill">
-                <div class="skill">
-                    <div class="progress" data-progress="65">
-                        <span class="progress-number">0%</span>
-                    </div>
-                </div>
-                <span class="title">Javascript</span>
+            <div class="servicios-elemento" data-aos="fade-up"data-aos-duration="3000">
+                <i class="fa-thin fa-paintbrush-pencil"></i>
+                <h3>Diseño Gráfico</h3>
+                <p>Transformo ideas en imágenes atractivas y efectivas que comunican mensajes de manera visualmente impactante.</p>
             </div>
 
-            <div class="parent-skill">
-                <div class="skill">
-                    <div class="progress" data-progress="85">
-                        <span class="progress-number">0%</span>
-                    </div>
-                </div>
-                <span class="title">CSS</span>
+            <div class="servicios-elemento" data-aos="fade-up"data-aos-duration="3000">
+                <i class="fa-thin fa-file-video"></i>
+                <h3>Edición de Video</h3>
+                <p>Creo narrativas visuales cautivadoras mediante la edición experta de videos para transmitir historias de manera envolvente.</p>
             </div>
 
-            <div class="parent-skill">
-                <div class="skill">
-                    <div class="progress" data-progress="85">
-                        <span class="progress-number">0%</span>
-                    </div>
-                </div>
-                <span class="title">Diseño</span>
+            <div class="servicios-elemento" data-aos="fade-up"data-aos-duration="3000">
+                <i class="fa-thin fa-magnifying-glass-dollar"></i>
+                <h3>Marketing de SEO</h3>
+                <p>Optimizo estratégicamente la visibilidad en línea y el posicionamiento en motores de búsqueda para aumentar la presencia y el tráfico web de manera efectiva.</p>
             </div>
 
         </div>
-    </div>
+    </section>
 
-    <!-- Pie de Pagina -->
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
-                        <img loading="Lazy" src="Assets/img/Foot.png" alt="Skay J">
-                    </a>
-                </figure>
-            </div>
-            <div class="box" id="Contacto">
-                <h2>SOBRE MI</h2>
-                <p>Ingeniero de sistemas venezolano con un enfoque en la creación de diseños innovadores y un firme compromiso con el crecimiento personal y la adquisición de nuevos conocimientos.</p>
-                <br>
-                <h2>CONTACTAME</h2>
-                <p><i class="fa-duotone fa-envelope"></i> JohnFerreira19@proton.me</p>
-                <p><i class="fa-brands fa-whatsapp"></i> (+58) 414 050 6943</p>
-            </div>
-            <div class="box">
-                <h2>SIGUEME</h2>
-                <div class="red-social">
-                    <a href="https://www.facebook.com/Ing.JohnFerreira" class="fa fa-facebook"></a>
-                  <a href="https://www.instagram.com/skay.j19/" class="fa fa-instagram"></a>
+    <!-- Galeria de Trabajos -->
+    <section id="portafolio">
+        <div class="titulo" data-aos="fade-up" data-aos-duration="3000">
+            <h2>Mi <span>Portafolio</span></h2>
+        </div>
+        <ul data-aos="fade-up" data-aos-duration="3000">
+            <li>
+                <a href="http://www.uba-createc.info/?i=1">
+                    <figure>
+                        <img src='assets/Image/trabajos/Trabajo-1.jpg'>
+                        <figcaption>Red-Createc UBA</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/uba_redcreatec/">
+                    <figure>
+                        <img src='assets/Image/trabajos/Trabajo-2.jpg'>
+                        <figcaption>Red-Createc UBA</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <figure>
+                        <img src='assets/Image/trabajos/Trabajo-3.jpg'>
+                        <figcaption>Garaje Libre</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=9ys-e6k-No8">
+                    <figure>
+                        <img src='assets/Image/trabajos/Trabajo-4.jpg'>
+                        <figcaption>Red-Createc UBA</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=3UDRT24ouDI">
+                    <figure>
+                        <img src='assets/Image/trabajos/Trabajo-5.jpg'>
+                        <figcaption>Red-Createc UBA</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/bajolamatica.gl/">
+                    <figure>
+                        <img src='assets/Image/trabajos/Trabajo-6.png'>
+                        <figcaption>Bajo La Matica</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sección del pie de página -->
+    <footer>
+        <div class="pie-pagina" id="contacto">
+            <div class="grupo-1">
+
+                <!-- 1ra columna: Logo -->
+                <div class="logo" data-aos="fade-up" data-aos-duration="3000">
+                    <figure>
+                        <a href="https://skay-j.github.io/Inicio/">
+                            <img src="Assets/Image/Logo-Pie.png" alt="Skay J">
+                        </a>
+                    </figure>
+                </div>
+
+                <!-- 2da columna: Sobre mi -->
+                <div class="pie-cont" data-aos="fade-up" data-aos-duration="3000">
+                    <h4>SOBRE MI</h4>
+                    <p>Ingeniero De Sistemas Venezolano Con Un Enfoque En La Creación De Diseños Innovadores Y Un Firme Compromiso Con El Crecimiento Personal Y La Adquisición De Nuevos Conocimientos.</p>
+                </div>
+
+                <!-- 3ra columna: Propiedades -->
+                <div class="pie-cont" data-aos="fade-up" data-aos-duration="3000">
+                    <h4>CONTACTAME</h4>
+                    <p><i class="fa-thin fa-envelope"></i> JohnFerreira19@Proton.Me</p>
+                    <br>
+                    <p><i class="fa-brands fa-whatsapp"></i> (+58) 414 - 050 - 6943</p>
                 </div>
             </div>
-        </div>
-        <div class="grupo-2">
-            <small>&copy; 2024 <b><a href="https://walink.co/49a85f">Skay J</a><b> | All Copyrights Reserved.</small>
+
+            <!-- Información de derechos de autor y redes sociales -->
+            <div class="grupo-2">
+                <div class="cont">
+                    <p>&copy;
+
+                        <!-- Script para mostrar el año actual -->
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        
+                        <b><a href="https://walink.co/49a85f">Skay J</a><b> | All Rights Reserved.
+                    </p>
+                </div>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/Ing.JohnFerreira"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href="https://www.instagram.com/skay.j19"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/SkayJ"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/skayj"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
-    <script src="Assets/JS/Tab-Activa.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="assets/js/img-john.js"></script>
+    <script src="assets/js/navbar.js"></script>
 </body>
 </html>
