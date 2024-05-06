@@ -1,0 +1,218 @@
+<!-- Archivo: page-carrito-de-compras.php -->
+<?php
+// Verifica si WooCommerce está activo
+if ( ! class_exists( 'WooCommerce' ) ) {
+    echo 'WooCommerce no está instalado o activado.';
+    return;
+}
+?>
+
+<div class="container">
+    <h1>Carrito de Compras</h1>
+
+    <!-- Mostrar productos en el menú -->
+    <div class="menu-productos">
+        <?php
+        $products = wc_get_products( array(
+            'limit' => -1,
+            'status' => 'publish',
+            'orderby' => 'title',
+            'order' => 'asc',
+        ) );
+
+        foreach ( $products as $product ) {
+            echo '<div class="producto">';
+            echo '<h3>' . $product->get_name() . '</h3>';
+            echo '<p>Precio: $' . $product->get_price() . '</p>';
+            echo '<button class="agregar-al-carrito" data-product-id="' . $product->get_id() . '">Agregar al Carrito</button>';
+            echo '</div>';
+        }
+        ?>
+    </div>
+
+    <!-- Mostrar carrito de compras -->
+    <div class="carrito-de-compras">
+        <h2>Carrito de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="items-carrito">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total a Pagar:</td>
+                    <td id="total-a-pagar">$0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <button id="boton-pagar">Pagar</button>
+    </div>
+
+    <!-- Mostrar información de pago -->
+    <div class="informacion-pago" style="display: none;">
+        <h2>Información de Pago</h2>
+        <p>Banco BNC 0191</p>
+        <p>Cédula: 30.137.607</p>
+        <p>Teléfono: 0414-0506943</p>
+        <input type="file" id="comprobante-pago" accept="image/*,application/pdf">
+        <button id="boton-hacer-pedido">Hacer Pedido</button>
+    </div>
+</div>
+
+<script>
+// Código JavaScript para manejar el carrito de compras
+document.addEventListener('DOMContentLoaded', function() {
+    const agregarAlCarritoButtons = document.querySelectorAll('.agregar-al-carrito');
+    const itemsCarrito = document.getElementById('items-carrito');
+    const totalAPagar = document.getElementById('total-a-pagar');
+    const botonPagar = document.getElementById('boton-pagar');
+    const informacionPago = document.querySelector('.informacion-pago');
+    const botonHacerPedido = document.getElementById('boton-hacer-pedido');
+    const comprobantePago = document.getElementById('comprobante-pago');
+
+    let carrito = [];
+
+    // Función para agregar productos al carrito
+    function agregarAlCarrito(productId) {
+        // Lógica para agregar el producto al carrito
+        // ...
+    }
+
+    // Función para actualizar el carrito en la interfaz
+    function actualizarCarrito() {
+        // Lógica para actualizar la tabla del carrito y el total a pagar
+        // ...
+    }
+
+    // Función para eliminar un producto del carrito
+    function eliminarDelCarrito(index) {
+        // Lógica para eliminar el producto del carrito
+        // ...
+    }
+
+    // Función para mostrar la información de pago
+    botonPagar.addEventListener('click', function() {
+        informacionPago.style.display = 'block';
+    });
+
+    // Función para enviar el pedido por WhatsApp
+    botonHacerPedido.addEventListener('click', function() {
+        // Lógica para enviar el pedido por WhatsApp
+        // ...
+    });
+});
+</script>
+
+<style>
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el menú de productos */
+.menu-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.producto {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    margin-top: 0;
+}
+
+.producto button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el carrito de compras */
+.carrito-de-compras {
+    margin-top: 40px;
+}
+
+.carrito-de-compras table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.carrito-de-compras th, .carrito-de-compras td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrito-de-compras tfoot td {
+    font-weight: bold;
+}
+
+.carrito-de-compras button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para la información de pago */
+.informacion-pago {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.informacion-pago input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}
+
+.informacion-pago button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+</style>
